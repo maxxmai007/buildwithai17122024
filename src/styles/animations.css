@@ -1,0 +1,35 @@
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.3;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleX(1.5);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleX(1);
+  }
+}
+
+.timeline-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-line {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-line.visible {
+  transform: scaleY(1);
+}
